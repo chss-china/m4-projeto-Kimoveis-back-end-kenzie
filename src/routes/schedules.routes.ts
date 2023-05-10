@@ -7,7 +7,7 @@ import {
   listScheduleRealEstateController,
 } from "../controllers/schedules.controller";
 import { verifyNotAdmin } from "../middlewares/verifyAdmin";
-import { verifyTokenValidMidd } from "../middlewares/verifyTokenIsValid";
+
 import { verifyIdMiddRealEstate } from "../middlewares/verifyRealEstate.midd";
 import { verifyUserScheduleDateHour } from "../middlewares/veirfyScheduleshourDate.midd";
 import { verifyRealEstateScheduleDateHour } from "../middlewares/veirfySchedulesHourDateNotUser";

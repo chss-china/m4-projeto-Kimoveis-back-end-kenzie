@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { schemaAdress } from "./adress.schemas";
+
 const createRealEstateSchema = z.object({
   id: z.number(),
   value: z.number().or(z.string()).default(0),
@@ -52,90 +52,7 @@ const createRealEstateSchemaRequest = createRealEstateSchema.omit({
   createdAt: true,
   updatedAt: true,
 });
-/*
-realEstateComplete: {
-    id: expect.any(Number),
-    value: 100000.99,
-    size: 400,
-    sold: false,
-    address: {
-      id: expect.any(Number),
-      street: 'street',
-      zipCode: 'zipCode',
-      number: 'number',
-      city: 'city',
-      state: 's0',
-    },
-    categoryToCreate: {
-      name: 'category',
-    },
-    createdAt: expect.any(String),
-    updatedAt: expect.any(String),
-  },
-  realEstateAddressWithoutNumber: {
-    id: expect.any(Number),
-    value: 100000.99,
-    size: 400,
-    address: {
-      street: 'street1',
-      zipCode: 'zipCode1',
-      number: null,
-      city: 'city1',
-      state: 's2',
-    },
-    categoryToCreate: {
-      name: 'category1',
-    },
-    createdAt: expect.any(String),
-    updatedAt: expect.any(String),
-  },
-  realEstateUnique: {
-    value: 100000.99,
-    size: 400,
-    address: {
-      street: 'street2',
-      zipCode: 'zipCode2',
-      number: 'number2',
-      city: 'city2',
-      state: 's2',
-    },
-    categoryToCreate: {
-      name: 'category2',
-    },
-  },
-  realEstateInvalidBody: {
-    value: '100000.99',
-    size: -8,
-    address: {
-      street: [],
-      zipCode: 'mais que 8 caracteres',
-      city: {},
-      state: 'mais que 8 caracteres',
-    },
-    categoryToCreate: {
-      name: 'category3',
-    },
-  },
-  realEstateInvalidBody2: {
-    value: 100000.99,
-    categoryToCreate: {
-      name: 'category4',
-    },
-  },
-};
-bject {
-        "message": Object {
-          "address": Array [
-    +       "Required",
-            "Expected string, received array",
-            "String must contain at most 8 character(s)",
-    +       "Required",
-            "Expected string, received object",
-            "String must contain at most 2 character(s)",
-          ],
-          "size": Array [
-            "Number must be greater than 0",
- */
+
 export {
   createRealEstateSchema,
   createRealEstateSchemaRequest,

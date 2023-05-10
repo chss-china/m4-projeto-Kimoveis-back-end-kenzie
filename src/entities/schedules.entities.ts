@@ -1,12 +1,8 @@
 import {
   Entity,
-  Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
   ManyToOne,
-  JoinColumn,
 } from "typeorm";
 import { User } from "./user.entities";
 import { RealEstate } from "./realEstate.entities";

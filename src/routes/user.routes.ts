@@ -12,7 +12,7 @@ import {
 } from "../controllers/user.controlller";
 import { verifyEmailMidd } from "../middlewares/verifyEmailExists";
 import { verifyNotAdmin } from "../middlewares/verifyAdmin";
-import { verifyTokenValidMidd } from "../middlewares/verifyTokenIsValid";
+
 import { verifyTokenValidMiddGet } from "../middlewares/verifyTokenIsValidGet";
 import { verifyIdMidd } from "../middlewares/verifyIdExists";
 import { updateVerifyNotAdmin } from "../middlewares/veirfyAdminUpdate";

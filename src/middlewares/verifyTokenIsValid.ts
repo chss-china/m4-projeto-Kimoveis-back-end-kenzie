@@ -8,11 +8,9 @@ export const verifyTokenValidMidd = async (
   next: NextFunction
 ): Promise<void> => {
   let token = req.headers.authorization;
-   if (!token) {
+  if (!token) {
     throw new AppError("Invalid credentials", 401);
-  } /*if (!token) {
-    throw new AppError("Missing bearer token", 401);
-  }*/
+  }
   token = token.split(" ")[1];
   jwt.verify(token, process.env.SECRET_KEY!, (err: any, decoded: any) => {
     if (err) {

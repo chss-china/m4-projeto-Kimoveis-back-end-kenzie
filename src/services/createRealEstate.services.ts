@@ -5,7 +5,7 @@ import {
 } from "../interfaces/realEstate.interface";
 import { Address, Category, RealEstate } from "../entities";
 import { AppDataSource } from "../data-source";
-import { Tadress } from "../interfaces/adress.interfaces";
+
 import { AppError } from "../error";
 
 export const createRealEstateService = async (

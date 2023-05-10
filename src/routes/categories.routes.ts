@@ -9,7 +9,7 @@ import { createCategoriesSchemaRequest } from "../schemas/categories.schemas";
 import { verifyTokenValidMiddGet } from "../middlewares/verifyTokenIsValidGet";
 import { verifyNotAdmin } from "../middlewares/verifyAdmin";
 import { verifyNamelMiddCategory } from "../middlewares/verifyCategoriesnameExists";
-import { listCategorieService } from "../services/listCategoriesServices";
+
 import { verifyIdlMiddCategory } from "../middlewares/verifyCategory.notfound.midd";
 const categoriesRoutes: Router = Router();
 categoriesRoutes.post(

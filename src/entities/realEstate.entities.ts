@@ -4,14 +4,13 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  DeleteDateColumn,
   OneToOne,
   JoinColumn,
   OneToMany,
   ManyToOne,
 } from "typeorm";
 import { Address } from "./adresses.entities";
-import { join } from "path";
+
 import { Category } from "./category.entities";
 import { Schedule } from "./schedules.entities";
 @Entity("real_estate")

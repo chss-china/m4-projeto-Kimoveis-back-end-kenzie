@@ -6,10 +6,7 @@ import {
 import { createCategoryService } from "../services/createCategoriesServices";
 import { listCategorieService } from "../services/listCategoriesServices";
 import { listCategorieRealEstateService } from "../services/listCategoriesRealEstate.services";
-import {
-  TrealEstateRequest,
-  TrealEstateResponse,
-} from "../interfaces/realEstate.interface";
+
 import { Category } from "../entities";
 export const createCategoriesControllers = async (
   req: Request,

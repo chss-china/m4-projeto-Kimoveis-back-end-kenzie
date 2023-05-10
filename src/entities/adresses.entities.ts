@@ -1,13 +1,5 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
-  OneToOne,
-} from "typeorm";
-import { RealEstate } from "./realEstate.entities";
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+
 @Entity("addresses")
 class Address {
   @PrimaryGeneratedColumn("increment")

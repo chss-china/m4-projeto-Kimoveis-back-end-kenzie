@@ -9,7 +9,7 @@ import { AppDataSource } from "../data-source";
 import { AppError } from "../error";
 import { compare } from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { sign } from "jsonwebtoken";
+
 import "dotenv/config";
 export const createLoginService = async (
   loginData: TloginRequest

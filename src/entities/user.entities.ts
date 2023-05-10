@@ -8,7 +8,6 @@ import {
   UpdateDateColumn,
   DeleteDateColumn,
   OneToMany,
-  AfterInsert,
   BeforeInsert,
   BeforeUpdate,
 } from "typeorm";
