@@ -1,3 +1,5 @@
+import { hash, hashSync } from "bcryptjs";
+import * as bcrypt from "bcryptjs";
 import {
   Entity,
   Column,
@@ -6,27 +8,49 @@ import {
   UpdateDateColumn,
   DeleteDateColumn,
   OneToMany,
+  AfterInsert,
+  BeforeInsert,
+  BeforeUpdate,
 } from "typeorm";
 import { Schedule } from "./schedules.entities";
+
 @Entity("users")
 class User {
   @PrimaryGeneratedColumn("increment")
   id: number;
+
   @Column({ type: "varchar", length: 45 })
   name: string;
+
   @Column({ type: "varchar", length: 45, unique: true })
   email: string;
+
   @Column({ default: false })
   admin: boolean;
+
   @Column({ type: "varchar", length: 120 })
   password: string;
+
   @CreateDateColumn({ type: "date" })
-  createdAt: Date;
+  createdAt: string;
+
   @UpdateDateColumn({ type: "date" })
-  updatedAt: Date;
+  updatedAt: string;
+
   @DeleteDateColumn({ type: "date", nullable: true })
-  deletedAt: Date;
+  deletedAt: Date | string | null;
+
   @OneToMany(() => Schedule, (Schedule) => Schedule.user)
-  schedule: Schedule[];
+  schedules: Schedule[];
+
+  @BeforeInsert()
+  @BeforeUpdate()
+  hashPassword() {
+    const isHash = bcrypt.getRounds(this.password);
+    if (!isHash) {
+      this.password = hashSync(this.password, 10);
+    }
+  }
 }
+
 export { User };
