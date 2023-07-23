@@ -1,5 +1,5 @@
 # Projeto Final: KImóveis - TypeORM com Relacionamentos
-
+## Resultado foi excelente obtendo nota maxima e passando em todos testes
 # Introdução
 
 O dono da imobiliária Kimóveis contratou sua empresa para desenvolver uma aplicação para o gerenciamento de seus serviços.
