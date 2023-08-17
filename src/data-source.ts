@@ -19,6 +19,14 @@ const settings = (): DataSourceOptions => {
   const dbUrl: string | undefined = process.env.DATABASE_URL;
 
   if (!dbUrl) throw new Error("Missing env var: 'DATABASE_URL'");
+  if (nodeEnv === "production") {
+    return {
+      type: "postgres",
+      url: process.env.DATABASE_URL!,
+      entities: [entitiesPath],
+      migrations: [migrationPath],
+    };
+  }
 
   return {
     type: "postgres",
