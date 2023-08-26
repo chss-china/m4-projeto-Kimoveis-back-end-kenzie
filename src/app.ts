@@ -7,6 +7,7 @@ import loginRoutes from "./routes/login.routes";
 import categoriesRoutes from "./routes/categories.routes";
 import realEstateRoutes from "./routes/realEstate.routes";
 import schedulesRoutes from "./routes/schedules.routes";
+import swaggerUi from "swagger-ui-express";
 
 const app: Application = express();
 app.use(express.json());
